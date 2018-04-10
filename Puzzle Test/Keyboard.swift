@@ -14,6 +14,8 @@ import UIKit
 protocol KeyboardDelegate: class {
     func keyWasTapped(character: String)
     func keyDelete()
+    func keyDone()
+    func cshift(output: String)
 }
 
 extension String {
@@ -29,6 +31,12 @@ extension String {
 class Keyboard: UIView {
     @IBOutlet weak var input: UILabel!
     @IBOutlet weak var converted: UILabel!
+    
+    static let
+    asciiSafeStart: UInt32 = 32,
+    asciiSafeEnd: UInt32 = 126,
+    A: UInt32 = 65,
+    Z: UInt32 = 101
     
     var textFieldValue: String = ""
     
@@ -76,7 +84,19 @@ class Keyboard: UIView {
         self.delegate?.keyDelete()
     }
     
-    @IBAction func keyCeasar(_ sender: UIButton) {
+    @IBAction func keyDone(_ sender: UIButton) {
+        self.delegate?.keyDone()
+    }
+    
+    @IBAction func keyCaesar(_ sender: UIButton) {
+        var output = ""
+        for i: UInt32 in 0...25 {
+            output.append(String(i))
+            output.append(" ")
+            output.append(shiftText(text: input.text!, shiftBy: i))
+            output.append("\n")
+        }
+        self.delegate?.cshift(output: output)
     }
 
     @IBAction func keyBinary(_ sender: UIButton) {
@@ -97,7 +117,7 @@ class Keyboard: UIView {
             let rawBinaryText = input.text?.filter { "01".contains($0) }
             let binaryComponents = rawBinaryText?.components(withLength: 8)
             for component in binaryComponents! {
-                if let decimal = Int(component, radix: 2), decimal >= 32 && decimal <= 126{
+                if let decimal = Int(component, radix: 2), decimal >= Keyboard.asciiSafeStart && decimal <= Keyboard.asciiSafeEnd {
                     output.append(Character(UnicodeScalar(decimal)!))
                 }
             }
@@ -105,5 +125,27 @@ class Keyboard: UIView {
         
         converted.text = output
     }
+    
+    func shiftText(text: String, shiftBy: UInt32) -> String {
+        return Array(text.uppercased().unicodeScalars)
+            .map { self.shiftCharValue(charValue: $0.value, shiftBy: shiftBy) }
+            .reduce("") { $0 + letterFromValue(value: $1) }
+    }
+    
+    func shiftCharValue(charValue: UInt32, shiftBy: UInt32) -> UInt32 {
+        return (charValue >= Keyboard.A && charValue <= Keyboard.Z)
+            ? shiftLetterValue(letterValue: charValue, shiftBy: shiftBy)
+            : charValue
+    }
+    
+    func shiftLetterValue(letterValue: UInt32, shiftBy: UInt32) -> UInt32 {
+        let shiftedValue = (letterValue - Keyboard.A) + shiftBy
+        return Keyboard.A + (shiftedValue % 26)
+    }
+    
+    func letterFromValue(value:UInt32) -> String {
+        return String(Character(UnicodeScalar(value)!))
+    }
+    
     
 }

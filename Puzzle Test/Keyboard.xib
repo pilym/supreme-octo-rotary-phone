@@ -323,14 +323,6 @@
                         <action selector="keyTapped:" destination="-1" eventType="touchUpInside" id="Zd3-2N-vmU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-fV-7jw">
-                    <rect key="frame" x="0.0" y="210" width="372" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Space"/>
-                    <connections>
-                        <action selector="keySpace:" destination="-1" eventType="touchUpInside" id="88e-ml-Vs9"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxH-ib-Ual">
                     <rect key="frame" x="266" y="172" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -350,9 +342,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYj-wL-CyG">
                     <rect key="frame" x="-1" y="248" width="69" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Ceasar"/>
+                    <state key="normal" title="Caesar"/>
                     <connections>
-                        <action selector="keyCeasar:" destination="-1" eventType="touchUpInside" id="bSb-CW-HkU"/>
+                        <action selector="keyCaesar:" destination="-1" eventType="touchUpInside" id="bSb-CW-HkU"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V88-23-Veq">
@@ -361,6 +353,23 @@
                     <state key="normal" title="Binary"/>
                     <connections>
                         <action selector="keyBinary:" destination="-1" eventType="touchUpInside" id="HVx-mo-LLZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foB-6v-p7s">
+                    <rect key="frame" x="304" y="210" width="68" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="keyDone:" destination="-1" eventType="touchUpInside" id="1iO-PP-yzP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-fV-7jw">
+                    <rect key="frame" x="76" y="210" width="220" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Space"/>
+                    <connections>
+                        <action selector="keySpace:" destination="-1" eventType="touchUpInside" id="88e-ml-Vs9"/>
                     </connections>
                 </button>
             </subviews>

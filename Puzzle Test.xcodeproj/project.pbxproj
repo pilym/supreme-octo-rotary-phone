@@ -12,6 +12,8 @@
 		3A56F05D207837CD001142A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A56F05B207837CD001142A8 /* Main.storyboard */; };
 		3A56F05F207837CD001142A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A56F05E207837CD001142A8 /* Assets.xcassets */; };
 		3A56F062207837CD001142A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A56F060207837CD001142A8 /* LaunchScreen.storyboard */; };
+		3A9348D5207C16DE00FC0140 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9348D4207C16DE00FC0140 /* Keyboard.xib */; };
+		3A9348D7207C196F00FC0140 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9348D6207C196F00FC0140 /* Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3A56F05E207837CD001142A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A56F061207837CD001142A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A56F063207837CD001142A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9348D4207C16DE00FC0140 /* Keyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Keyboard.xib; sourceTree = "<group>"; };
+		3A9348D6207C196F00FC0140 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		3A56F056207837CD001142A8 /* Puzzle Test */ = {
 			isa = PBXGroup;
 			children = (
+				3A9348D6207C196F00FC0140 /* Keyboard.swift */,
 				3A56F057207837CD001142A8 /* AppDelegate.swift */,
 				3A56F059207837CD001142A8 /* ViewController.swift */,
 				3A56F05B207837CD001142A8 /* Main.storyboard */,
 				3A56F05E207837CD001142A8 /* Assets.xcassets */,
 				3A56F060207837CD001142A8 /* LaunchScreen.storyboard */,
 				3A56F063207837CD001142A8 /* Info.plist */,
+				3A9348D4207C16DE00FC0140 /* Keyboard.xib */,
 			);
 			path = "Puzzle Test";
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			files = (
 				3A56F062207837CD001142A8 /* LaunchScreen.storyboard in Resources */,
 				3A56F05F207837CD001142A8 /* Assets.xcassets in Resources */,
+				3A9348D5207C16DE00FC0140 /* Keyboard.xib in Resources */,
 				3A56F05D207837CD001142A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A56F05A207837CD001142A8 /* ViewController.swift in Sources */,
+				3A9348D7207C196F00FC0140 /* Keyboard.swift in Sources */,
 				3A56F058207837CD001142A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A45FA80207D92AB000C43B4 /* BinaryConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A45FA7F207D92AB000C43B4 /* BinaryConv.swift */; };
+		3A45FA82207DA56C000C43B4 /* CaesarConv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A45FA81207DA56C000C43B4 /* CaesarConv.swift */; };
+		3A45FA84207DACCF000C43B4 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A45FA83207DACCF000C43B4 /* NotesViewController.swift */; };
 		3A56F058207837CD001142A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A56F057207837CD001142A8 /* AppDelegate.swift */; };
 		3A56F05A207837CD001142A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A56F059207837CD001142A8 /* ViewController.swift */; };
 		3A56F05D207837CD001142A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A56F05B207837CD001142A8 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A45FA7F207D92AB000C43B4 /* BinaryConv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryConv.swift; sourceTree = "<group>"; };
+		3A45FA81207DA56C000C43B4 /* CaesarConv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaesarConv.swift; sourceTree = "<group>"; };
+		3A45FA83207DACCF000C43B4 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		3A56F054207837CD001142A8 /* Puzzle Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Puzzle Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A56F057207837CD001142A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A56F059207837CD001142A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				3A56F060207837CD001142A8 /* LaunchScreen.storyboard */,
 				3A56F063207837CD001142A8 /* Info.plist */,
 				3A9348D4207C16DE00FC0140 /* Keyboard.xib */,
+				3A45FA7F207D92AB000C43B4 /* BinaryConv.swift */,
+				3A45FA81207DA56C000C43B4 /* CaesarConv.swift */,
+				3A45FA83207DACCF000C43B4 /* NotesViewController.swift */,
 			);
 			path = "Puzzle Test";
 			sourceTree = "<group>";
@@ -143,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A45FA82207DA56C000C43B4 /* CaesarConv.swift in Sources */,
 				3A56F05A207837CD001142A8 /* ViewController.swift in Sources */,
+				3A45FA84207DACCF000C43B4 /* NotesViewController.swift in Sources */,
 				3A9348D7207C196F00FC0140 /* Keyboard.swift in Sources */,
+				3A45FA80207D92AB000C43B4 /* BinaryConv.swift in Sources */,
 				3A56F058207837CD001142A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

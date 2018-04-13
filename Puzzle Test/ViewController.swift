@@ -102,7 +102,7 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
             break
         case 2:
             button1.isHidden = true
-            mainTextView.text = ""
+            mainTextView.text = "Try shaking your device"
             break
         case 3:
             mainTextView.text = """

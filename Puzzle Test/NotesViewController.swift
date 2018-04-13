@@ -28,5 +28,18 @@ class NotesViewController: UIViewController {
     @IBAction func goBack(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func helpButtonPressed(_ sender: UIButton) {
+        let helpString = "Caesar cipher"
+        
+        let escapedText = helpString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        
+        guard let url = URL(string: "https://www.google.com/search?q=" + escapedText!) else {
+            return
+        }
+        
+        UIApplication.shared.canOpenURL(url)
+        UIApplication.shared.open(url)
+    }
 }
 

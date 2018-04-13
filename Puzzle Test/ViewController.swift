@@ -100,10 +100,11 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
             How to play:
             Find the secret word (case insensitive) on each level and enter it in the textfield at the top to go to the next level.
             """
-            button1.text = "Got it"
+            button1.setTitle("Got it", for: .normal)
             break
         case 2:
             button1.isHidden = true
+            mainTextView.text = ""
             break
         case 3:
             mainTextView.text = """
@@ -117,6 +118,7 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         default:
             break
         }
+    }
     
     // respond to shakes
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -135,7 +137,7 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         switch level {
         case 1:
             button1.isEnabled = false
-            button1.text = "enter"
+            button1.setTitle("enter", for: .normal)
             break
         default:
             break
@@ -146,29 +148,28 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         switch level {
         case 1:
             if answer.uppercased() == "ENTER" {
-                goToNextLevel()
             }
             break
         case 2:
             if answer.uppercased() == "WHITE HOUSE" {
-                goToNextLevel()
             }
             break
         case 3:
             if answer.uppercased() == "FILM" {
                 mainTextView.text = "You Win!!!!!!!!!!!!"
-                goToNextLevel()
             }
             break
         default:
             break
         }
+        goToNextLevel()
     }
     
     func goToNextLevel() {
         level += 1
         hiddenLabel.isHidden = true
         setLevelTitle()
+        setupLevel()
     }
     
     func setLevelTitle() {

@@ -45,7 +45,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ht4-lJ-Iug"/>
+                                    <action selector="button1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLP-eI-iOs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeS-3z-6Mp">
@@ -64,10 +64,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerInput" destination="7TS-Nk-loA" id="jgD-pJ-g8V"/>
-                        <outlet property="button1" destination="cX0-1l-SRs" id="KKu-B5-hZZ"/>
-                        <outlet property="hiddenLabel" destination="n31-Bf-pSq" id="dEc-EH-esP"/>
+                        <outlet property="button1" destination="cX0-1l-SRs" id="ixN-j7-vYp"/>
+                        <outlet property="hiddenLabel" destination="n31-Bf-pSq" id="2c3-Cz-HkP"/>
                         <outlet property="levelName" destination="6aJ-cd-L3I" id="Y6q-fz-aEL"/>
-                        <outlet property="mainTextView" destination="EeS-3z-6Mp" id="Q8B-pg-MGo"/>
+                        <outlet property="mainTextView" destination="EeS-3z-6Mp" id="nI4-eJ-feJ"/>
                         <segue destination="6bB-US-5ev" kind="presentation" identifier="notesSegue" id="6or-no-37E"/>
                     </connections>
                 </viewController>

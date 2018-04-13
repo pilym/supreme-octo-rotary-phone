@@ -56,9 +56,7 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("Setting Active Textfield")
         self.activeTextField = textField
-        print("Active textField Set!")
     }
     
     func keyDelete() {
@@ -148,21 +146,23 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         switch level {
         case 1:
             if answer.uppercased() == "ENTER" {
+                goToNextLevel()
             }
             break
         case 2:
             if answer.uppercased() == "WHITE HOUSE" {
+                goToNextLevel()
             }
             break
         case 3:
             if answer.uppercased() == "FILM" {
                 mainTextView.text = "You Win!!!!!!!!!!!!"
+                goToNextLevel()
             }
             break
         default:
             break
         }
-        goToNextLevel()
     }
     
     func goToNextLevel() {

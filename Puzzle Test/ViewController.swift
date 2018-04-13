@@ -13,6 +13,9 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
     @IBOutlet weak var levelName: UILabel!
     @IBOutlet weak var answerInput: UITextField!
     @IBOutlet weak var hiddenLabel: UILabel!
+    @IBOutlet weak var mainTextView: UILabel!
+    @IBOutlet weak var button1: UIButton!
+    
     
     var activeTextField = UITextField()
     var mainKeyboard: Keyboard = Keyboard()
@@ -36,7 +39,8 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         
         self.becomeFirstResponder()
         
-        hiddenLabel.isHidden = true
+        initGame()
+        setupLevel()
         setLevelTitle()
     }
 
@@ -84,11 +88,41 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         }
     }
     
-    // Enable detection of shake motion
+    // actual game stuff here
+    func initGame() {
+        hiddenLabel.isHidden = true
+    }
+    
+    func setupLevel() {
+        switch level {
+        case 1:
+            mainTextView.text = """
+            How to play:
+            Find the secret word (case insensitive) on each level and enter it in the textfield at the top to go to the next level.
+            """
+            button1.text = "Got it"
+            break
+        case 2:
+            button1.isHidden = true
+            break
+        case 3:
+            mainTextView.text = """
+            Changes to game:
+            G8: 1 -> 0
+            A5: 0 -> 1
+            M8: 1 -> 0
+            E5: 0 -> 1
+            """
+            break
+        default:
+            break
+        }
+    
+    // respond to shakes
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             switch level {
-            case 1:
+            case 2:
                 hiddenLabel.isHidden = false
                 break
             default:
@@ -97,12 +131,32 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         }
     }
     
-    // actual game stuff here
+    @IBAction func button1Pressed(_ sender: UIButton) {
+        switch level {
+        case 1:
+            button1.isEnabled = false
+            button1.text = "enter"
+            break
+        default:
+            break
+        }
+    }
+    
     func checkAnswer(answer: String) {
         switch level {
         case 1:
+            if answer.uppercased() == "ENTER" {
+                goToNextLevel()
+            }
+            break
+        case 2:
             if answer.uppercased() == "WHITE HOUSE" {
-                hiddenLabel.text = "You win!!!!"
+                goToNextLevel()
+            }
+            break
+        case 3:
+            if answer.uppercased() == "FILM" {
+                mainTextView.text = "You Win!!!!!!!!!!!!"
                 goToNextLevel()
             }
             break
@@ -113,15 +167,22 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
     
     func goToNextLevel() {
         level += 1
+        hiddenLabel.isHidden = true
         setLevelTitle()
     }
     
     func setLevelTitle() {
         switch level {
         case 1:
-            levelName.text = "It's not a Tapping Game"
+            levelName.text = "Start"
             break
         case 2:
+            levelName.text = "It's not a tapping game"
+            break
+        case 3:
+            levelName.text = "Changelog"
+            break
+        case 4:
             levelName.text = "You Win!!!!!!!!!!!!"
             break
         default:

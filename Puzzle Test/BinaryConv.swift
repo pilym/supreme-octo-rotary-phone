@@ -27,6 +27,7 @@ class BinaryConv {
         var output: String = ""
         
         for scalar in (ascii.unicodeScalars) {
+            output.append("0")
             output.append(String(scalar.value, radix: 2))
             output.append(" ")
         }

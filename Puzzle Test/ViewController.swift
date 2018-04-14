@@ -68,6 +68,13 @@ class ViewController: UIViewController, KeyboardDelegate, UITextFieldDelegate {
         view.endEditing(true)
         checkAnswer(answer: answerInput.text!)
     }
+    @IBAction func answerBtn(_ sender: Any) {
+        mainTextView.text = """
+        1: enter
+        2: white house
+        3: film
+        """
+    }
     
     func cshift(output: String) {
         notesData = output
